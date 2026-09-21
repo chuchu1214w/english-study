@@ -41,6 +41,9 @@
 - [x] 浏览器实测：总览、单词复习评分、计划打卡、练习新增、笔记新增、设置页均正常，控制台无报错
 - [x] README、需求文档、开发日志
 - [x] 建 GitHub 仓库并推送，开启 Pages
+  - 代码（公开）：<https://github.com/chuchu1214w/english-study>
+  - 数据（私有）：<https://github.com/chuchu1214w/english-study-data>
+  - 在线地址：<https://chuchu1214w.github.io/english-study/>
 
 ### 已知限制 / 待办
 

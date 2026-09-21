@@ -29,7 +29,7 @@
 python3 -m http.server 8765
 ```
 
-- 在线：仓库已开启 GitHub Pages，地址见仓库首页 About。
+- 在线：<https://chuchu1214w.github.io/english-study/>（GitHub Pages，推送后约一分钟生效）
 
 ### 2. 配置 GitHub 同步（可选，但强烈建议）
 
