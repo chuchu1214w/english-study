@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+node_modules/
+# 学习数据与密钥永远不进入本仓库（数据在私有仓库 english-study-data，密钥只在浏览器 localStorage）
+data.json
+secrets.json

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>英语自学 · 雅思与口语</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">EN</span>
+      <span class="brand-name">英语自学</span>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="#/dashboard" data-route="dashboard">总览</a>
+      <a href="#/vocab" data-route="vocab">单词</a>
+      <a href="#/plan" data-route="plan">计划</a>
+      <a href="#/practice" data-route="practice">练习</a>
+      <a href="#/notes" data-route="notes">笔记</a>
+      <a href="#/settings" data-route="settings">设置</a>
+    </nav>
+    <div class="sync-indicator" id="syncIndicator" title="点击立即同步">
+      <span class="dot"></span><span class="label">本地</span>
+    </div>
+  </header>
+
+  <main id="view" class="view"></main>
+
+  <div id="toast" class="toast" hidden></div>
+  <div id="modalRoot"></div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/srs.js"></script>
+  <script src="js/sync.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/modules/dashboard.js"></script>
+  <script src="js/modules/vocab.js"></script>
+  <script src="js/modules/plan.js"></script>
+  <script src="js/modules/practice.js"></script>
+  <script src="js/modules/notes.js"></script>
+  <script src="js/modules/settings.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
