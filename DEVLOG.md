@@ -70,3 +70,19 @@
 - 算法层 `SRS.schedule` 仍支持 0–3 四档，UI 只用 0（忘了）和 2（记得），以后想加回来不用动算法。
 - 手机端按钮加大，副标题不再隐藏。
 - 用户配置真实 Token 后，私有仓库已收到 `data.json`（自动同步提交正常）。Claude Key 由用户在浏览器端自行填写与测试。
+
+---
+
+## 2026-09-22 · UI 重设计（Figma，iOS 风格）
+
+- 用户反馈现有界面与交互“丑”，要求模仿苹果生态软件。
+- 在 Figma 建立设计稿：<https://www.figma.com/design/x7iu935v74L5IM5VQAYkSu>
+  - `00 Foundations`：iOS 系统色（systemBlue/Green/Orange/Red、groupedBackground #F2F2F7、label、secondaryLabel #8E8E93、separator）、字号阶梯（Large Title 34 / Title2 22 / Headline 17 / Body 17 / Subheadline 15 / Footnote 13 / Caption 12）、基础组件（主按钮、tinted 按钮、破坏性按钮、Inset Grouped 卡片）。
+  - 六个 iPhone 画板：`01 今天`、`02 复习卡片`、`03 单词`、`04 计划`、`05 练习`、`06 设置`。
+- 交互调整（相对 v0.1）：
+  - 底部 Tab 改为 今天 / 单词 / 计划 / 练习 / 设置，笔记并入“练习”页底部入口。
+  - 首页一个主按钮“开始复习 · N 个词”，任务用圆形勾选（Reminders 风格）。
+  - 复习卡片改为全屏模态：顶部“关闭 / 进度 / 编辑”，底部两个大按钮 忘了 / 记得，按钮内直接显示下次复习时间。
+  - 设置页改成 iOS 设置样式的分组列表，同步与 AI 状态用绿点表示。
+- 字体说明：Figma 渲染端没有 SF Pro 与 PingFang，稿子用 Inter + Noto Sans SC 代替；网页实现时用系统字体栈（-apple-system / PingFang SC）。
+- 待办：按设计稿重写网页 CSS 与页面结构。
