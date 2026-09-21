@@ -53,16 +53,14 @@ Views.vocab = (() => {
             ${w.exampleIelts ? `<div class="example">📝 ${UI.esc(w.exampleIelts)}</div>` : ''}
             ${w.exampleDaily ? `<div class="example">🇺🇸 ${UI.esc(w.exampleDaily)}</div>` : ''}
             ${w.tip ? `<div class="example">💡 ${UI.esc(w.tip)}</div>` : ''}
-          ` : '<div class="hint">点击卡片或按空格查看释义</div>'}
+          ` : '<div class="hint">点击卡片或按空格看释义，再选“记得”或“忘了”</div>'}
         </div>
         ${s.flipped ? `
-        <div class="grade-row">
-          <button class="btn again" data-grade="0">忘了<small>${intervals[0]}</small></button>
-          <button class="btn hard" data-grade="1">困难<small>${intervals[1]}</small></button>
-          <button class="btn good" data-grade="2">记得<small>${intervals[2]}</small></button>
-          <button class="btn easy" data-grade="3">简单<small>${intervals[3]}</small></button>
+        <div class="grade-row two">
+          <button class="btn again" data-grade="0">✗ 忘了<small>${intervals[0]}后再见</small></button>
+          <button class="btn good" data-grade="2">✓ 记得<small>${intervals[2]}后复习</small></button>
         </div>
-        <div class="help mt right">快捷键 1 / 2 / 3 / 4</div>` : ''}
+        <div class="help mt right">快捷键：← 或 1 忘了 · → 或 2 记得</div>` : ''}
         <div class="btn-row mt"><button class="btn sm ghost" id="editCur">编辑此词</button><button class="btn sm ghost" id="speak">🔊 朗读</button></div>
       </div>`;
 
@@ -74,7 +72,8 @@ Views.vocab = (() => {
     document.onkeydown = (e) => {
       if (e.target.matches('input,textarea,select')) return;
       if (e.key === ' ') { e.preventDefault(); if (!s.flipped) { s.flipped = true; renderReview(body, due); } }
-      if (s.flipped && ['1', '2', '3', '4'].includes(e.key)) grade(Number(e.key) - 1);
+      if (s.flipped && (e.key === '1' || e.key === 'ArrowLeft')) grade(0);
+      if (s.flipped && (e.key === '2' || e.key === 'ArrowRight')) grade(2);
     };
 
     function grade(g) {

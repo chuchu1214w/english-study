@@ -207,6 +207,8 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--primary-sof
 .flashcard .example { color: var(--muted); font-size: 14px; max-width: 520px; }
 .flashcard .hint { font-size: 12px; color: var(--muted); margin-top: 12px; }
 .grade-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 12px; }
+.grade-row.two { grid-template-columns: 1fr 1fr; }
+.grade-row.two .btn { padding: 14px 6px; font-size: 16px; }
 .grade-row .btn { flex-direction: column; padding: 10px 6px; }
 .grade-row .btn small { font-size: 11px; opacity: 0.75; font-weight: 400; }
 .grade-row .again { border-color: var(--danger); color: var(--danger); }
@@ -283,5 +285,4 @@ pre.code { background: var(--surface-2); padding: 10px; border-radius: 8px; over
   .nav a { padding: 6px 8px; font-size: 13px; }
   .view { padding-bottom: 90px; }
   .toast { bottom: 90px; }
-  .grade-row .btn small { display: none; }
 }
